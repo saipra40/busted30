@@ -169,7 +169,16 @@ const ExploreFunds = () => {
                 </div>
 
                 {/* Action Button */}
-                <button className="w-full py-3 bg-gradient-to-r from-genzpink to-genzpurple text-white rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all">
+                <button 
+                  onClick={() => {
+                    if (isAuthenticated) {
+                      navigate(`/invest/${fund.id}`);
+                    } else {
+                      navigate('/social-auth');
+                    }
+                  }}
+                  className="w-full py-3 bg-gradient-to-r from-genzpink to-genzpurple text-white rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all"
+                >
                   Invest Now
                 </button>
               </div>
