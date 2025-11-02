@@ -71,7 +71,7 @@ const Navbar = () => {
                   Login
                 </Link>
                 <Link
-                  to="/signup"
+                  to="/social-auth"
                   className="px-6 py-2 bg-gradient-to-r from-genzpink to-genzpurple text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all"
                 >
                   Get Started
