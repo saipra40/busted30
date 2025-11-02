@@ -7,23 +7,12 @@ import { Toaster } from "./components/ui/toaster";
 // Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import KiteNavbar from "./components/KiteNavbar";
 
 // Pages
-import Home from "./pages/Home";
-import Products from "./pages/Products";
-import Pricing from "./pages/Pricing";
-import Support from "./pages/Support";
-import About from "./pages/About";
+import MFHome from "./pages/MFHome";
+import SIPCalculators from "./pages/SIPCalculators";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-
-// Kite Pages
-import KiteDashboard from "./pages/KiteDashboard";
-import Holdings from "./pages/Holdings";
-import Positions from "./pages/Positions";
-import Orders from "./pages/Orders";
-import Funds from "./pages/Funds";
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -31,8 +20,8 @@ const ProtectedRoute = ({ children }) => {
   
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-gray-600">Loading...</div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-genzpink to-genzpurple">
+        <div className="text-white text-xl font-semibold animate-pulse">Loading your portfolio...</div>
       </div>
     );
   }
@@ -40,19 +29,12 @@ const ProtectedRoute = ({ children }) => {
   return isAuthenticated ? children : <Navigate to="/login" />;
 };
 
-// Layout Components
+// Layout Component
 const MainLayout = ({ children }) => (
   <>
     <Navbar />
     {children}
     <Footer />
-  </>
-);
-
-const KiteLayout = ({ children }) => (
-  <>
-    <KiteNavbar />
-    {children}
   </>
 );
 
@@ -63,55 +45,19 @@ function App() {
         <div className="App">
           <Routes>
             {/* Public Routes */}
-            <Route path="/" element={<MainLayout><Home /></MainLayout>} />
-            <Route path="/products" element={<MainLayout><Products /></MainLayout>} />
-            <Route path="/pricing" element={<MainLayout><Pricing /></MainLayout>} />
-            <Route path="/support" element={<MainLayout><Support /></MainLayout>} />
-            <Route path="/about" element={<MainLayout><About /></MainLayout>} />
+            <Route path="/" element={<MainLayout><MFHome /></MainLayout>} />
+            <Route path="/calculators" element={<MainLayout><SIPCalculators /></MainLayout>} />
             <Route path="/login" element={<MainLayout><Login /></MainLayout>} />
             <Route path="/signup" element={<MainLayout><Signup /></MainLayout>} />
 
-            {/* Protected Kite Routes */}
-            <Route
-              path="/kite/dashboard"
-              element={
-                <ProtectedRoute>
-                  <KiteLayout><KiteDashboard /></KiteLayout>
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/kite/holdings"
-              element={
-                <ProtectedRoute>
-                  <KiteLayout><Holdings /></KiteLayout>
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/kite/positions"
-              element={
-                <ProtectedRoute>
-                  <KiteLayout><Positions /></KiteLayout>
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/kite/orders"
-              element={
-                <ProtectedRoute>
-                  <KiteLayout><Orders /></KiteLayout>
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/kite/funds"
-              element={
-                <ProtectedRoute>
-                  <KiteLayout><Funds /></KiteLayout>
-                </ProtectedRoute>
-              }
-            />
+            {/* Placeholder routes */}
+            <Route path="/explore" element={<MainLayout><MFHome /></MainLayout>} />
+            <Route path="/learn" element={<MainLayout><MFHome /></MainLayout>} />
+            <Route path="/portfolio" element={
+              <ProtectedRoute>
+                <MainLayout><MFHome /></MainLayout>
+              </ProtectedRoute>
+            } />
 
             {/* Fallback */}
             <Route path="*" element={<Navigate to="/" />} />
