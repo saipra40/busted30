@@ -50,11 +50,19 @@ function App() {
             {/* Public Routes */}
             <Route path="/" element={<MainLayout><MFHome /></MainLayout>} />
             <Route path="/calculators" element={<MainLayout><SIPCalculators /></MainLayout>} />
+            <Route path="/explore" element={<MainLayout><ExploreFunds /></MainLayout>} />
+            <Route path="/social-auth" element={<SocialAuth />} />
             <Route path="/login" element={<MainLayout><Login /></MainLayout>} />
             <Route path="/signup" element={<MainLayout><Signup /></MainLayout>} />
+            
+            {/* KYC Route */}
+            <Route path="/kyc" element={
+              <ProtectedRoute>
+                <MainLayout><KYC /></MainLayout>
+              </ProtectedRoute>
+            } />
 
             {/* Placeholder routes */}
-            <Route path="/explore" element={<MainLayout><MFHome /></MainLayout>} />
             <Route path="/learn" element={<MainLayout><MFHome /></MainLayout>} />
             <Route path="/portfolio" element={
               <ProtectedRoute>
