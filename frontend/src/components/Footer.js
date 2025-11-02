@@ -63,10 +63,10 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-white/20">
           <p className="text-white/60 text-xs leading-relaxed">
-            FundZ: Your Gen Z investment companion. Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns.
+            ZaM: Vibe investing for Gen Z and Millennials. Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns.
           </p>
           <p className="text-white/60 text-xs mt-4">
-            © 2025 FundZ. Made with love for Gen Z and Millennials. All rights reserved.
+            © 2025 ZaM. Made with love for Gen Z and Millennials. All rights reserved.
           </p>
         </div>
       </div>
