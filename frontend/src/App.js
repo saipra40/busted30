@@ -11,6 +11,9 @@ import Footer from "./components/Footer";
 // Pages
 import MFHome from "./pages/MFHome";
 import SIPCalculators from "./pages/SIPCalculators";
+import SocialAuth from "./pages/SocialAuth";
+import KYC from "./pages/KYC";
+import ExploreFunds from "./pages/ExploreFunds";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
