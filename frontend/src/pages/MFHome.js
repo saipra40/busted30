@@ -119,11 +119,11 @@ const MFHome = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1542015354406-36ae110009fb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHw0fHxHZW4lMjBaJTIwY2VsZWJyYXRpbmclMjBzdWNjZXNzfGVufDB8fHx8MTc2MjA1NDkxMHww&ixlib=rb-4.1.0&q=85"
-            alt="Gen Z celebrating success"
-            className="w-full h-full object-cover opacity-20"
+            src="https://images.unsplash.com/photo-1698374178988-9da9609584b8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxmcmllbmRzJTIwY2VsZWJyYXRpbmclMjB0b2dldGhlcnxlbnwwfHx8fDE3NjIwNTUwNDZ8MA&ixlib=rb-4.1.0&q=85"
+            alt="Gen Z friends celebrating together"
+            className="w-full h-full object-cover opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-genzpink/80 via-genzpurple/80 to-genzdark/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-genzpink/85 via-genzpurple/85 to-genzdark/90"></div>
         </div>
 
         <div className="max-w-6xl mx-auto text-center relative z-10">
