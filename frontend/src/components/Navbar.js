@@ -21,8 +21,11 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <div className="flex items-center space-x-2">
               <Sparkles className="text-genzpink" size={28} />
-              <div className="text-2xl font-bold bg-gradient-to-r from-genzpink to-genzpurple bg-clip-text text-transparent">
-                FundZ
+              <div>
+                <div className="text-2xl font-bold bg-gradient-to-r from-genzpink to-genzpurple bg-clip-text text-transparent">
+                  ZaM
+                </div>
+                <div className="text-xs text-gray-500 -mt-1">Vibe Investing</div>
               </div>
             </div>
           </Link>
