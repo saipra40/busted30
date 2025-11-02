@@ -64,6 +64,13 @@ function App() {
               </ProtectedRoute>
             } />
 
+            {/* Investment Route */}
+            <Route path="/invest/:fundId" element={
+              <ProtectedRoute>
+                <MainLayout><InvestNow /></MainLayout>
+              </ProtectedRoute>
+            } />
+
             {/* Learn route */}
             <Route path="/learn" element={<MainLayout><Learn /></MainLayout>} />
             
