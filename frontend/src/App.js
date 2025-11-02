@@ -14,6 +14,7 @@ import SIPCalculators from "./pages/SIPCalculators";
 import SocialAuth from "./pages/SocialAuth";
 import KYC from "./pages/KYC";
 import ExploreFunds from "./pages/ExploreFunds";
+import InvestNow from "./pages/InvestNow";
 import Learn from "./pages/Learn";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
