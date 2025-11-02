@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Search, TrendingUp, Star, Filter } from 'lucide-react';
 import { mockMutualFunds } from '../mockDataMF';
+import { useAuth } from '../context/AuthContext';
 
 const ExploreFunds = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
 
   const categories = ['All', 'Large Cap', 'Small Cap', 'Mid Cap', 'Index', 'Flexi Cap', 'Hybrid', 'Sectoral'];
 
