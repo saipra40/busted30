@@ -63,8 +63,10 @@ function App() {
               </ProtectedRoute>
             } />
 
+            {/* Learn route */}
+            <Route path="/learn" element={<MainLayout><Learn /></MainLayout>} />
+            
             {/* Placeholder routes */}
-            <Route path="/learn" element={<MainLayout><MFHome /></MainLayout>} />
             <Route path="/portfolio" element={
               <ProtectedRoute>
                 <MainLayout><MFHome /></MainLayout>
