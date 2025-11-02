@@ -153,7 +153,7 @@ const Navbar = () => {
                   Login
                 </Link>
                 <Link
-                  to="/signup"
+                  to="/social-auth"
                   className="block w-full px-4 py-2 bg-gradient-to-r from-genzpink to-genzpurple text-white rounded-full text-center font-semibold"
                   onClick={() => setIsOpen(false)}
                 >
