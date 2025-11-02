@@ -55,7 +55,7 @@ const Footer = () => {
                 <Youtube size={20} />
               </a>
             </div>
-            <Link to="/signup" className="inline-block px-6 py-2 bg-white text-genzpurple rounded-full font-semibold text-sm hover:bg-gray-100 transform hover:scale-105 transition-all">
+            <Link to="/social-auth" className="inline-block px-6 py-2 bg-white text-genzpurple rounded-full font-semibold text-sm hover:bg-gray-100 transform hover:scale-105 transition-all">
               Get Started
             </Link>
           </div>
