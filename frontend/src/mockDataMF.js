@@ -108,6 +108,42 @@ export const mockMutualFunds = [
     rating: 4.6,
     description: 'Flexibility is key. Invests across market caps based on opportunities.',
     navValue: 312.89
+  },
+  {
+    id: 'mf7',
+    name: 'Gold & Precious Metal Fund',
+    category: 'Sectoral',
+    risk: 'High',
+    returns: {
+      oneYear: 15.8,
+      threeYear: 18.2,
+      fiveYear: 16.5
+    },
+    minInvestment: 1000,
+    exitLoad: '1% if redeemed within 1 year',
+    expenseRatio: 1.6,
+    aum: 6500,
+    rating: 4.1,
+    description: 'Invest in precious metals. Hedge against inflation with gold and silver.',
+    navValue: 178.45
+  },
+  {
+    id: 'mf8',
+    name: 'Mid Cap Growth Fund',
+    category: 'Mid Cap',
+    risk: 'High',
+    returns: {
+      oneYear: 28.3,
+      threeYear: 31.5,
+      fiveYear: 26.8
+    },
+    minInvestment: 500,
+    exitLoad: '1% if redeemed within 1 year',
+    expenseRatio: 1.7,
+    aum: 9800,
+    rating: 4.4,
+    description: 'Sweet spot investing. Mid-sized companies with high growth potential.',
+    navValue: 267.89
   }
 ];
 
