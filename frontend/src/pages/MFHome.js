@@ -13,10 +13,10 @@ const MFHome = () => {
             <span className="text-sm font-medium">Built for Gen Z & Millennials</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Invest Smart,<br />Grow Wealth
+            Vibe Investing for<br />Gen Z & Millennials
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Mutual funds made simple. No jargon, just real talk about growing your money.
+            ZaM makes mutual funds easy. Start your wealth journey with good vibes only.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
