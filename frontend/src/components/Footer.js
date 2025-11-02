@@ -11,7 +11,10 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Sparkles size={24} />
-              <h3 className="text-2xl font-bold">FundZ</h3>
+              <div>
+                <h3 className="text-2xl font-bold">ZaM</h3>
+                <p className="text-xs text-white/80">Vibe Investing</p>
+              </div>
             </div>
             <p className="text-white/80 text-sm">
               Investing made simple for Gen Z and Millennials
