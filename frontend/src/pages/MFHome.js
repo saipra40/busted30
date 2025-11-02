@@ -233,7 +233,7 @@ const MFHome = () => {
             Join thousands of Gen Z and Millennials building wealth with ZaM
           </p>
           <Link
-            to="/signup"
+            to="/social-auth"
             className="inline-block px-10 py-4 bg-white text-genzpurple rounded-full font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all shadow-xl"
           >
             Get Started Now
