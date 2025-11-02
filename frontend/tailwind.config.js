@@ -52,7 +52,10 @@ module.exports = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+  			genzpink: '#EC4899',
+  			genzpurple: '#7C3AED',
+  			genzdark: '#0F0F0F'
   		},
   		keyframes: {
   			'accordion-down': {
