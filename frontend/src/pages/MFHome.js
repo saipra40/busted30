@@ -115,16 +115,26 @@ const MFHome = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-genzpink via-genzpurple to-genzdark text-white py-20 px-4">
+      <section className="relative overflow-hidden bg-gradient-to-br from-genzpink via-genzpurple to-genzdark text-white py-20 px-4 min-h-[600px] flex items-center">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1542015354406-36ae110009fb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHw0fHxHZW4lMjBaJTIwY2VsZWJyYXRpbmclMjBzdWNjZXNzfGVufDB8fHx8MTc2MjA1NDkxMHww&ixlib=rb-4.1.0&q=85"
+            alt="Gen Z celebrating success"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-genzpink/80 via-genzpurple/80 to-genzdark/90"></div>
+        </div>
+
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
             <Sparkles size={16} />
             <span className="text-sm font-medium">Built for Gen Z & Millennials</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
             Vibe Investing for<br />Gen Z & Millennials
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto drop-shadow-md">
             ZaM makes mutual funds easy. Start your wealth journey with good vibes only.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -136,7 +146,7 @@ const MFHome = () => {
             </Link>
             <Link
               to="/learn"
-              className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold text-lg hover:bg-white/10 transform hover:scale-105 transition-all"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white rounded-full font-semibold text-lg hover:bg-white/20 transform hover:scale-105 transition-all"
             >
               Learn First
             </Link>
