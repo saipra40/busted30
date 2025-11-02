@@ -1,6 +1,115 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, Target, BookOpen, Calculator, Sparkles, Zap } from 'lucide-react';
+
+const SuccessStories = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const allStories = [
+    {
+      name: 'Rohan, 23',
+      role: 'Software Engineer',
+      story: 'Started with just ₹2000/month SIP. In 2 years, I saved enough for my dream bike! ZaM made investing feel like a game, not a chore.',
+      returns: '+42%',
+      duration: '2 years',
+      initial: 'R'
+    },
+    {
+      name: 'Priya, 25',
+      role: 'Content Creator',
+      story: 'As a freelancer, my income varies. ZaM\'s flexibility let me invest when I could. Now I have an emergency fund that\'s actually growing!',
+      returns: '+38%',
+      duration: '18 months',
+      initial: 'P'
+    },
+    {
+      name: 'Arjun, 22',
+      role: 'Recent Graduate',
+      story: 'Started investing from my first salary. The calculators showed me I could reach ₹10L in 5 years. Best decision ever!',
+      returns: '+35%',
+      duration: '1 year',
+      initial: 'A'
+    },
+    {
+      name: 'Sanya, 24',
+      role: 'Marketing Executive',
+      story: 'Was scared of stocks. Started with hybrid funds. Now I\'m confident and my portfolio is up 40%! Thanks ZaM for making it simple.',
+      returns: '+40%',
+      duration: '2.5 years',
+      initial: 'S'
+    },
+    {
+      name: 'Karan, 26',
+      role: 'Entrepreneur',
+      story: 'Used to think investing was for old people. ZaM changed my mind. Now I\'m building wealth while building my startup!',
+      returns: '+45%',
+      duration: '3 years',
+      initial: 'K'
+    },
+    {
+      name: 'Nisha, 21',
+      role: 'College Student',
+      story: 'Started with just ₹500/month from my internship stipend. Small amounts, big dreams. Already at ₹25K in 10 months!',
+      returns: '+28%',
+      duration: '10 months',
+      initial: 'N'
+    }
+  ];
+
+  const displayedStories = showAll ? allStories : allStories.slice(0, 3);
+
+  return (
+    <section className="py-20 px-4 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-genzpink to-genzpurple bg-clip-text text-transparent">
+              Real Stories, Real Vibes
+            </span>
+          </h2>
+          <p className="text-gray-600 text-lg">
+            See how Gen Z investors are winning with ZaM
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {displayedStories.map((story, index) => (
+            <div
+              key={index}
+              className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8 border-2 border-genzpink/20 hover:shadow-xl transition-shadow"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-genzpink to-genzpurple rounded-full flex items-center justify-center text-white font-bold text-xl">
+                  {story.initial}
+                </div>
+                <div className="ml-3">
+                  <h4 className="font-bold text-gray-900">{story.name}</h4>
+                  <p className="text-sm text-gray-600">{story.role}</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4">{story.story}</p>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-genzpink font-semibold">{story.returns} returns</span>
+                <span className="text-gray-500">{story.duration}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {!showAll && (
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setShowAll(true)}
+              className="px-8 py-4 bg-gradient-to-r from-genzpink to-genzpurple text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all"
+            >
+              Load More Stories
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
 
 const MFHome = () => {
   return (
