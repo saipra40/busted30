@@ -115,43 +115,68 @@ const MFHome = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-genzpink via-genzpurple to-genzdark text-white py-20 px-4 min-h-[600px] flex items-center">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1698374178988-9da9609584b8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxmcmllbmRzJTIwY2VsZWJyYXRpbmclMjB0b2dldGhlcnxlbnwwfHx8fDE3NjIwNTUwNDZ8MA&ixlib=rb-4.1.0&q=85"
-            alt="Gen Z friends celebrating together"
-            className="w-full h-full object-cover opacity-25"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-genzpink/85 via-genzpurple/85 to-genzdark/90"></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-            <Sparkles size={16} />
-            <span className="text-sm font-medium">Built for Gen Z & Millennials</span>
+      <section className="relative overflow-hidden bg-gradient-to-br from-genzpink via-genzpurple to-genzdark text-white py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12 relative z-10">
+            <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+              <Sparkles size={16} />
+              <span className="text-sm font-medium">Built for Gen Z & Millennials</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
+              Let's ZaM
+            </h1>
+            <p className="text-2xl md:text-3xl mb-8 text-white/90 max-w-3xl mx-auto drop-shadow-md font-semibold">
+              Vibe Investing for Gen Z and Millennials
+            </p>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
-            Vibe Investing for<br />Gen Z & Millennials
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto drop-shadow-md">
-            ZaM makes mutual funds easy. Start your wealth journey with good vibes only.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+          {/* Images Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12 relative z-10">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_finbroker-app-1/artifacts/dnn6ut3h_IMG_8784.jpeg"
+                alt="ZaM - Gen Z investing community"
+                className="w-full h-[400px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 right-6">
+                <h3 className="text-2xl font-bold text-white drop-shadow-lg">Your Money, Your Future</h3>
+                <p className="text-white/90 drop-shadow-md">Start building wealth today</p>
+              </div>
+            </div>
+
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_finbroker-app-1/artifacts/9awdnv5w_IMG_8785.jpeg"
+                alt="ZaM - Smart investing for millennials"
+                className="w-full h-[400px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 right-6">
+                <h3 className="text-2xl font-bold text-white drop-shadow-lg">Invest Like a Pro</h3>
+                <p className="text-white/90 drop-shadow-md">Simple, smart, and fun</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
             <Link
               to="/social-auth"
-              className="px-8 py-4 bg-white text-genzpurple rounded-full font-semibold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all shadow-xl"
+              className="px-10 py-4 bg-white text-genzpurple rounded-full font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all shadow-xl"
             >
-              Start Investing
+              Start Investing Now
             </Link>
             <Link
               to="/learn"
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white rounded-full font-semibold text-lg hover:bg-white/20 transform hover:scale-105 transition-all"
+              className="px-10 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white/20 transform hover:scale-105 transition-all"
             >
-              Learn First
+              Learn How It Works
             </Link>
           </div>
         </div>
+        
         {/* Decorative elements */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-genzpink/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-genzpurple/30 rounded-full blur-3xl"></div>
